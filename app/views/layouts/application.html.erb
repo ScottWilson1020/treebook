@@ -2,13 +2,45 @@
 <html>
 <head>
   <title>Treebook</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="./" class="navbar-brand">CrowdP</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <li><%=link_to "All Statuses", statuses_path %></li></li>
+          <li><a href="#">Cities</a></li>
+          <li><a href="#">Teams</a></li>
+        </li>
+	        </ul>
+	      </li>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
+	 <div class="Statuscontainer">
+
+		<%= yield %>
+	 </div>
+	 
+	
 </body>
 </html>
+
+
